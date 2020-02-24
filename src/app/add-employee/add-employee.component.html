@@ -1,0 +1,16 @@
+
+
+<h2><a routerLink="/"> < back</a></h2>
+<form  id="formNewProduct" name="mynewform" #employeeData ="ngForm" (ngSubmit) = "addNewEmployee(employeeData.value)">
+
+    
+      <label for="exampleInputEmail1">Name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" name="name" ngModel>
+    
+      <label for="exampleInputPassword1">Salary</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Salary" name="salary" ngModel>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div *ngIf="newAdded">{{confirmMsg}}</div>
+        

@@ -1,0 +1,22 @@
+<h1>Employees</h1>
+<h2><a routerLink="/AddEmployee"> +Add an employee</a></h2>
+<table class="table table-hover" >
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">salary</th>
+        <th scope="col">functions</th>
+        <th scope="col">functions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <th scope="row">{{emp.id}}</th>
+        <td>{{emp.name}}</td>
+        <td>{{emp.salary}}</td>
+        <td (click) = "deletEmployee(employee.id)">Delete</td>
+        <td>Update</td>
+      </tr>
+
+    </tbody>
